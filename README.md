@@ -17,3 +17,5 @@ learn react following https://bearit.udemy.com/course/react-the-complete-guide-i
 # now rerun `npm start` to start development server
 
 Note: should keep the development server run as long as I am developing the codes
+
+# the ./react-complete-guide is a project about 'expense tracker'
