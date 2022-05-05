@@ -1,4 +1,4 @@
-//redering date
+import "./ExpenseDate.css";
 
 function ExpenseDate(props) {
   //output date to human readable format, seperate d, m and y
@@ -8,11 +8,10 @@ function ExpenseDate(props) {
   const year = props.date.getFullYear();
 
   return (
-    <div>
-      {props.date.toISOString()}
-      <div>{month}</div>
-      <div>{year}</div>
-      <div>{day}</div>
+    <div className="expense-date">
+      <div className="expense-date__month">{month}</div>
+      <div className="expense-date__year">{year}</div>
+      <div className="expense-date__day">{day}</div>
     </div>
   );
 }
