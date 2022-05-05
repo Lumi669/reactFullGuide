@@ -1,10 +1,10 @@
 import "./Card.css";
 
-function Card(props) {
+const Card = (props) => {
   //any value set on the props will be added to the long string named classes, which will then be set to the div inside the card.
   const classes = "card " + props.className;
   return <div className={classes}>{props.children}</div>;
-}
+};
 
 export default Card;
 
