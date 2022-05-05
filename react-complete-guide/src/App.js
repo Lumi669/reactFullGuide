@@ -22,7 +22,7 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  return <Expenses expenses={expenses} />;
+  return <Expenses items={expenses} />;
 }
 
 export default App;
