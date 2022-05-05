@@ -1,6 +1,6 @@
 //Note NOT use import "./ExpenseItem"; should use import xxx from " xxx", import css file can be simplified version e.g import "./ExpenseDate.css";
 import ExpenseItem from "./ExpenseItem";
-import Card from "./Card";
+import Card from "../UI/Card";
 import "./Expenses.css";
 
 function Expenses(props) {
