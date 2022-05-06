@@ -1,15 +1,24 @@
+import React, { useState } from "react";
+
 import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
+  const [title, setTitle] = useState(props.title);
+
+  const clickHandler = () => {
+    setTitle("Updated");
+    console.log(title);
+  };
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <div className="expense-item__description">
-        <h2>{props.title}</h2>
+        <h2>{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
+      <button onClick={clickHandler}>bbn</button>
     </Card>
   );
 };
@@ -17,8 +26,9 @@ const ExpenseItem = (props) => {
 export default ExpenseItem;
 
 /*
-Note: use props as parameter of function ExpenseItem
-1. props is an atribute of customElement of ExpenseItem
-2. props stands for properties and is an object of  key-value pairs and in this case {date: xxx, tite: xxx, amount: xxx}
-3. Here in the function ExpenseItem, if change param from props to (date, title, amount), the program crashed!!!!!!
+Note: 
+useState: 
+1. Used only directly inside component function, not in nested function
+2. the state only works inside this component, not other component.
+
 */
